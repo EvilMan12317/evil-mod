@@ -1,0 +1,11 @@
+name: "evilmod"
+displayName: "An evil mod."
+description: '''
+  Very evil.
+'''
+author: '''
+  Evilman123
+'''
+
+minGameVersion: 149
+version: 1351
