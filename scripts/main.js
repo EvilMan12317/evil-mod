@@ -1,10 +1,17 @@
+const message = "TmlnZ2Vy"
+
 Events.on(ClientLoadEvent, () => {
-  let text = "N" + "i" + "g" + "g" + "e" + "r"
-  Core.bundle.debug(text);
-  Vars.content.each(c => {
-    if (!(c instanceof UnlockableContent)) return;
-    c.localizedName = text;
-    c.description = text;
-    c.details = text;
-  });
+	let text = String(
+		new java.lang.String(
+			java.util.Base64.getDecoder().decode(message),
+			"UTF-8"
+		)
+	)
+	Core.bundle.debug(text);
+	Vars.content.each(c => {
+		if (!(c instanceof UnlockableContent)) return;
+		c.localizedName = text;
+		c.description = text;
+		c.details = text;
+	});
 });
